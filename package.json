@@ -1,0 +1,35 @@
+{
+  "name": "exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "LinkedList.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "resolutions": {
+    "babel-core": "^7.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanghl22/Exercise.git"
+  },
+  "author": "honglin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanghl22/Exercise/issues"
+  },
+  "homepage": "https://github.com/yanghl22/Exercise#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0"
+  }
+}
