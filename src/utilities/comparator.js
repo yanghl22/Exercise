@@ -1,9 +1,9 @@
 export default class Comparator {
-  constructor(compareFunction) {
-    this.compare = compareFunction || Comparator.defaultCompareFunction;
+  constructor(customCompare) {
+    this.compare = customCompare || Comparator.defaultCompare;
   }
 
-  static defaultCompareFunction = (a, b) => {
+  static defaultCompare = (a, b) => {
     if (a === b) {
       return 0;
     }

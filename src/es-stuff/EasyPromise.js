@@ -55,10 +55,10 @@ export default class EasyPromise {
     let done = false;
     try {
       fn(
-        value => {
+        result => {
           if (done) return;
           done = true;
-          onFulfilled(value);
+          onFulfilled(result);
         },
         reason => {
           if (done) return;

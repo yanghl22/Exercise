@@ -2,13 +2,12 @@ import Sort from "./Sort";
 
 export default class SelectionSort extends Sort {
   sort(originalArray) {
-    let array = [...originalArray];
-
-    let minIndex;
-    for (let i = 0; i < array.length; i++) {
+    let array = [...originalArray],
+      len = array.length;
+    for (let i = 0; i < len; i++) {
       let swapped = false;
-      minIndex = i;
-      for (let j = i + 1; j < array.length; j++) {
+      let minIndex = i;
+      for (let j = i + 1; j < len; j++) {
         if (this.comparator.lessThan(array[j], array[minIndex])) {
           minIndex = j;
           swapped = true;

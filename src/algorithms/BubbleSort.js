@@ -5,16 +5,16 @@ export default class BubbleSort extends Sort {
     let swapped = false;
     let array = [...originalArray];
 
-    for (let i = 1; i < array.length; i++) {
+    for (let i = 0; i < array.length ; i++) {
       let swapped = false;
 
       this.callbacks.visitingCallback(array[i]);
 
-      for (let j = 0; j < array.length - i; j++) {
+      for (let j = 1; j < array.length - i; j++) {
         this.callbacks.visitingCallback(array[j]);
 
-        if (this.comparator.lessThan(array[j + 1], array[j])) {
-          [array[j + 1], array[j]] = [array[j], array[j + 1]];
+        if (this.comparator.lessThan(array[j], array[j - 1])) {
+          [array[j - 1], array[j]] = [array[j], array[j - 1]];
           swapped = true;
         }
       }
